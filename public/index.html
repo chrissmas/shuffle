@@ -1,0 +1,319 @@
+
+<html lang="en">
+  <head>
+    <title>Page title</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.cdnfonts.com/css/general-sans?styles=135312,135310,135313,135303" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="shuffle-for-tailwind.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer="defer"></script>
+  </head>
+  <body class="antialiased bg-body text-body font-body">
+    <div>
+      <section class="bg-blueGray-50" x-data="{ mobileNavOpen: false }">
+        <div class="container mx-auto overflow-hidden">
+          <div class="flex items-center justify-between px-4 py-5 bg-blueGray-50">
+            <div class="w-auto">
+              <div class="flex flex-wrap items-center">
+                <div class="w-auto mr-14"><a href="#"><img class="h-24" src="images/Logo-Ful-chris.png" alt=""/></a></div>
+              </div>
+            </div>
+            <div class="w-auto">
+              <div class="flex flex-wrap items-center">
+                <div class="w-auto hidden lg:block">
+                  <ul class="flex items-center mr-16">
+                    <li class="mr-9 font-medium hover:text-gray-700"><a href="#">Home</a></li>
+                    <li class="mr-9 font-medium hover:text-gray-700"><a href="#">Rezensionen</a></li>
+                    <li class="mr-9 font-medium hover:text-gray-700"><a href="#">Kontakt</a></li>
+                    <li class="font-medium hover:text-gray-700"><a href="#">---</a></li>
+                  </ul>
+                </div>
+                <div class="w-auto hidden lg:block">
+                  <div class="inline-block"></div>
+                </div>
+                <div class="w-auto lg:hidden">
+                  <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                    <svg class="text-blue-700" width="51" height="51" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="56" height="56" rx="28" fill="currentColor"></rect>
+                      <path d="M37 32H19M37 24H19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50 hidden" :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}">
+            <div class="fixed inset-0 bg-gray-800 opacity-80" x-on:click="mobileNavOpen = !mobileNavOpen"></div>
+            <nav class="relative z-10 px-9 pt-8 bg-white h-full overflow-y-auto">
+              <div class="flex flex-wrap justify-between h-full">
+                <div class="w-full">
+                  <div class="flex items-center justify-between -m-2">
+                    <div class="w-auto p-2"><a class="inline-block" href="#"><img class="h-20" src="images/Logo-Ful-chris.png" alt=""/></a></div>
+                    <div class="w-auto p-2">
+                      <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col justify-center py-16 w-full">
+                  <ul>
+                    <li class="mb-12"><a class="font-medium hover:text-gray-700" href="#">Home</a></li>
+                    <li class="mb-12"><a class="font-medium hover:text-gray-700" href="#">Rezensionen</a></li>
+                    <li class="mb-12"><a class="font-medium hover:text-gray-700" href="#">Kontakt</a></li>
+                    <li><a class="font-medium hover:text-gray-700" href="#">---</a></li>
+                  </ul>
+                </div>
+                <div class="flex flex-col justify-end w-full pb-8">
+                  <div class="flex flex-wrap">
+                    <div class="w-full">
+                      <div class="block"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="overflow-hidden pt-16">
+          <div class="container px-4 mx-auto">
+            <div class="flex flex-wrap -m-8">
+              <div class="w-full md:w-1/2 p-8">
+                <div class="inline-block mb-6 px-2 py-1 font-semibold bg-green-100 rounded-full">
+                  <div class="flex flex-wrap items-center -m-1">
+                    <div class="w-auto p-1"><a class="text-sm" href="">👋 Hallo! Heiße Leitung!</a></div>
+                    <div class="w-auto p-1">
+                      <svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.66667 3.41675L12.75 7.50008M12.75 7.50008L8.66667 11.5834M12.75 7.50008L2.25 7.50008" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <h1 class="mb-6 text-6xl md:text-8xl lg:text-10xl font-bold font-heading md:max-w-xl leading-none">Meister Stuckateur-betrieb Seibel</h1>
+                <p class="mb-11 text-lg text-gray-900 font-medium md:max-w-md">Der Verputzer ihres Vertauens in der Region Miesau, Rammstein und Kaiserslautern.</p>
+                <div class="flex flex-wrap -m-2.5 mb-20">
+                  <div class="w-full md:w-auto p-2.5">
+                    <div class="block">
+                      <button class="py-4 px-6 w-full text-white font-semibold border rounded-xl focus:ring transition ease-in-out duration-200 border-blue-800 focus:ring-blue-800 hover:bg-blue-900 bg-blue-700" type="button">Nachricht schreiben</button>
+                    </div>
+                  </div>
+                  <div class="w-full md:w-auto p-2.5">
+                    <div class="block">
+                      <button class="py-4 px-9 w-full font-semibold border hover:border-gray-400 rounded-xl focus:ring focus:ring-gray-50 bg-transparent hover:bg-gray-100 transition ease-in-out duration-200 border-orange-500" type="button">
+                        <div class="flex flex-wrap justify-center items-center -m-1">
+                          <div class="w-auto p-1">
+                            <svg width="19" height="18" viewbox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2.75 3.75C2.75 2.92157 3.42157 2.25 4.25 2.25H6.70943C7.03225 2.25 7.31886 2.45657 7.42094 2.76283L8.5443 6.13291C8.66233 6.48699 8.50203 6.87398 8.1682 7.0409L6.47525 7.88737C7.30194 9.72091 8.77909 11.1981 10.6126 12.0247L11.4591 10.3318C11.626 9.99796 12.013 9.83767 12.3671 9.9557L15.7372 11.0791C16.0434 11.1811 16.25 11.4677 16.25 11.7906V14.25C16.25 15.0784 15.5784 15.75 14.75 15.75H14C7.7868 15.75 2.75 10.7132 2.75 4.5V3.75Z" stroke="#f57605" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                          </div>
+                          <div class="w-auto p-1 text-orange-500"><span>Anrufen</span></div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <p class="mb-6 text-sm text-gray-500 font-semibold uppercase">            SCHON ÜBER 100+ abgewickelte Aufträge IN DER REGION            <br/></p>
+              </div>
+              <div class="w-full md:w-1/2 p-8"><img class="transform hover:-translate-y-16 transition ease-in-out duration-1000" src="images/DSC02677.jpeg" alt=""/></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-24 bg-white overflow-hidden">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap -m-8">
+            <div class="w-full md:w-1/3 p-8">
+              <div class="md:max-w-xs mx-auto text-center">
+                <div class="flex justify-center mb-6 -m-1">
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="mb-4 text-2xl font-semibold leading-snug"><span>“Sauber, zuverlässig und top Qualität. Sehr empfehlenswert!”</span></h3>
+                <h3>            </h3>
+                <p class="text-gray-600 font-medium">              Monika H, Hütschenhausen              <br/></p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/3 p-8">
+              <div class="md:max-w-xs mx-auto text-center">
+                <div class="flex justify-center mb-6 -m-1">
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="mb-4 text-2xl font-semibold leading-snug"><span>"Unsere Altbauwohnung sieht dank der Stuckarbeiten von Herrn Seibel einfach großartig aus."</span></h3>
+                <h3>            </h3>
+                <p class="text-gray-600 font-medium">              Markus S., Rammstein              <br/></p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/3 p-8">
+              <div class="md:max-w-xs mx-auto text-center">
+                <div class="flex justify-center mb-6 -m-1">
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                  <div class="w-auto p-1">
+                    <svg width="24" height="23" viewbox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0L15.708 7.512L24 8.7168L18 14.5656L19.416 22.824L12 18.9264L4.584 22.824L6 14.5656L0 8.7168L8.292 7.512L12 0Z" fill="#0802fe"></path>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="mb-4 text-2xl font-semibold leading-snug"><span>"Toller Service und fairer Preis. Genau wie wir es uns vorgestellt haben!"</span></h3>
+                <h3>            </h3>
+                <p class="text-gray-600 font-medium">              Sabine und Thomas L., Katzenbach              <br/></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-white overflow-hidden">
+        <div class="pt-24 pb-28">
+          <div class="container px-4 mx-auto">
+            <h2 class="mb-4 text-6xl md:text-7xl font-bold font-heading tracking-px-n leading-tight">Kontakt</h2>
+            <p class="mb-24 text-lg text-gray-600 font-medium leading-normal md:max-w-lg">Individuelle Lösungen für Ihr Zuhause – Sprechen Sie uns an!</p>
+            <div class="flex flex-wrap -m-8">
+              <div class="w-full md:w-1/2 lg:w-1/3 p-8">
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-auto p-3">
+                    <div class="mb-6 relative mx-auto w-12 h-12 bg-indigo-50 rounded-full">
+                      <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                        <svg width="20" height="21" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.5 4.76664C2.5 3.84617 3.24619 3.09998 4.16667 3.09998H6.89937C7.25806 3.09998 7.57651 3.3295 7.68994 3.66979L8.93811 7.41432C9.06926 7.80775 8.89115 8.23773 8.52022 8.4232L6.63917 9.36372C7.55771 11.401 9.19898 13.0423 11.2363 13.9608L12.1768 12.0798C12.3622 11.7088 12.7922 11.5307 13.1857 11.6619L16.9302 12.91C17.2705 13.0235 17.5 13.3419 17.5 13.7006V16.4333C17.5 17.3538 16.7538 18.1 15.8333 18.1H15C8.09644 18.1 2.5 12.5035 2.5 5.59998V4.76664Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-1 p-3">
+                    <h3 class="mb-3 text-lg font-bold font-heading leading-snug">Telefon</h3>
+                    <p class="text-gray-600 font-medium leading-relaxed">                0151 68802101                <br/></p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/3 p-8">
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-auto p-3">
+                    <div class="mb-6 relative mx-auto w-12 h-12 bg-indigo-50 rounded-full">
+                      <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                        <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.11719 7.2666L9.69269 11.6503C10.2525 12.0235 10.9819 12.0235 11.5417 11.6503L18.1172 7.2666M4.78385 16.4333H16.4505C17.371 16.4333 18.1172 15.6871 18.1172 14.7666V6.43327C18.1172 5.51279 17.371 4.7666 16.4505 4.7666H4.78385C3.86338 4.7666 3.11719 5.51279 3.11719 6.43327V14.7666C3.11719 15.6871 3.86338 16.4333 4.78385 16.4333Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-1 p-3">
+                    <h3 class="mb-3 text-lg font-bold font-heading leading-snug">Email</h3>
+                    <p class="text-gray-600 font-medium leading-relaxed">meister@stuckateur-seibel.de</p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/3 p-8">
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-auto p-3">
+                    <div class="mb-6 relative mx-auto w-12 h-12 bg-indigo-50 rounded-full">
+                      <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
+                        <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M15.4491 14.4807C14.7215 15.2082 13.2539 16.6758 12.1485 17.7813C11.3674 18.5623 10.1026 18.5623 9.32157 17.7813C8.23595 16.6957 6.79548 15.2552 6.02098 14.4807C3.41749 11.8772 3.41749 7.65609 6.02098 5.0526C8.62448 2.4491 12.8456 2.4491 15.4491 5.0526C18.0526 7.65609 18.0526 11.8772 15.4491 14.4807Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M13.235 9.76664C13.235 11.1474 12.1157 12.2666 10.735 12.2666C9.35431 12.2666 8.23503 11.1474 8.23503 9.76664C8.23503 8.38593 9.35431 7.26664 10.735 7.26664C12.1157 7.26664 13.235 8.38593 13.235 9.76664Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-1 p-3">
+                    <h3 class="mb-3 text-lg font-bold font-heading leading-snug">Addresse</h3>
+                    <p class="text-gray-600 font-medium leading-relaxed">Brunnenstr. 32</p>
+                    <p class="text-gray-600 font-medium leading-relaxed">66882 Hütschenhausen</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <iframe class="w-full" id="gmap_canvas" style="height: 601px;" src="https://maps.google.com/maps?q=Brunnenstra%C3%9Fe%2032,%20huetschenhausen&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </section>
+      <section class="relative pt-24 pb-28 bg-white overflow-hidden"><img class="absolute right-0 top-0" src="flaro-assets/images/footers/gradient2.svg" alt=""/>
+        <div class="relative z-10 container px-4 mx-auto">
+          <div class="flex flex-wrap justify-between -m-8">
+            <div class="w-full sm:w-1/2 lg:w-2/12 p-8"><a class="inline-block" href="#"><img class="h-24" src="images/Logo-Ful-chris.png" alt=""/></a></div>
+            <div class="w-full sm:w-1/2 lg:w-2/12 p-8">
+              <h3 class="mb-6 font-semibold leading-normal">Stuckateurbetrieb Florian Seibel</h3>      
+              <ul>
+                <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed" href="#">Florian Seibel</a></li>
+                <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed" href="#">Brunnenstr. 32</a></li>
+                <li class="mb-3.5"><a class="text-gray-600 hover:text-gray-700 font-medium leading-relaxed" href="#">66882 Hütschenhausen</a></li>
+                <li class="mb-3.5">                </li>
+                <li class="mb-3.5">                </li>
+                <li>              </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
